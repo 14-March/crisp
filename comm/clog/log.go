@@ -1,9 +1,9 @@
 /*
-Package log
+Package clog
 @Author：14March
-@File：log.go
+@File：clog.go
 */
-package log
+package clog
 
 import (
 	"fmt"

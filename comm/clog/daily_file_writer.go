@@ -1,9 +1,9 @@
 /*
-Package log
+Package clog
 @Author：14March
 @File：daily_file_writer.go
 */
-package log
+package clog
 
 import (
 	"errors"
