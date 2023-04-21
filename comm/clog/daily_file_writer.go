@@ -51,12 +51,19 @@ func (w *dailyFileWriter) getOutputFile() (io.Writer, error) {
 
 	if w.lastYearDay == yearDay &&
 		nil != w.outputFile {
+		// 如果当前日期和上一次日期一样,
+		// 且输出文件也不为空,
 		return w.outputFile, nil
+	}
+
+	if nil == w.fileSwitchLock {
+		return nil, errors.New("fileSwitchLock is nil")
 	}
 
 	w.fileSwitchLock.Lock()
 	defer w.fileSwitchLock.Unlock()
 
+	// 加完锁之后进行二次判断
 	if w.lastYearDay == yearDay &&
 		nil != w.outputFile {
 		return w.outputFile, nil
@@ -64,20 +71,20 @@ func (w *dailyFileWriter) getOutputFile() (io.Writer, error) {
 
 	w.lastYearDay = yearDay
 
-	// 先建立日志目录
+	// 构建日志目录
 	err := os.MkdirAll(path.Dir(w.fileName), os.ModePerm)
 
 	if nil != err {
-		return nil, err
+		return nil, errors.New("创建目录失败")
 	}
 
-	// 定义日志文件名称 = 日志文件名 . 日期后缀
+	// 定义新的日志文件
 	newDailyFile := w.fileName + "." + time.Now().Format("20060102")
 
 	outputFile, err := os.OpenFile(
 		newDailyFile,
 		os.O_CREATE|os.O_APPEND|os.O_WRONLY,
-		0644, // rw-r--r--
+		0644,
 	)
 
 	if nil != err ||

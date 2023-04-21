@@ -1,0 +1,16 @@
+[ INFO ] 23:14:53.034745 server.go:54: 新客户端连入
+[ INFO ] 23:14:53.046988 server.go:54: 新客户端连入
+[ INFO ] 23:14:53.059027 server.go:54: 新客户端连入
+[ INFO ] 23:14:53.196473 server.go:54: 新客户端连入
+[ ERROR ] 23:15:18.517284 server.go:60: websocket: close 1001 (going away)
+[ ERROR ] 23:15:18.517284 server.go:60: websocket: close 1001 (going away)
+[ ERROR ] 23:15:18.517284 server.go:60: websocket: close 1001 (going away)
+[ ERROR ] 23:15:18.517794 server.go:60: websocket: close 1001 (going away)
+[ INFO ] 23:15:19.069808 server.go:54: 新客户端连入
+[ INFO ] 23:18:59.098037 server.go:54: 新客户端连入
+[ INFO ] 23:18:59.109497 server.go:54: 新客户端连入
+[ ERROR ] 23:19:06.987347 server.go:60: websocket: close 1001 (going away)
+[ ERROR ] 23:19:06.987347 server.go:60: websocket: close 1001 (going away)
+[ INFO ] 23:19:07.412114 server.go:54: 新客户端连入
+[ INFO ] 23:21:02.170766 server.go:64: [0 0 0 13 10 1 49 18 1 49]
+[ ERROR ] 23:21:11.641983 server.go:60: websocket: close 1001 (going away)
