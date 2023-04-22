@@ -1,0 +1,5 @@
+[ INFO ] 17:14:41.137027 server.go:55: 新客户端连入
+[ ERROR ] 17:14:50.536760 server.go:61: websocket: close 1001 (going away)
+[ INFO ] 17:14:50.844615 server.go:55: 新客户端连入
+[ INFO ] 17:15:07.639783 server.go:65: [0 0 0 13 10 1 49 18 1 49]
+[ INFO ] 17:15:07.639963 server.go:69: zzzzzzzzzzzzzz%!(EXTRA uint16=13)
