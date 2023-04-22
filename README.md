@@ -9,6 +9,3 @@
 ***
 **整体架构**
 ![img.png](img/server.png)
-
-**Log**
-![img.png](img/log.png)
