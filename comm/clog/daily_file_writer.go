@@ -51,8 +51,8 @@ func (w *dailyFileWriter) getOutputFile() (io.Writer, error) {
 
 	if w.lastYearDay == yearDay &&
 		nil != w.outputFile {
-		// 如果当前日期和上一次日期一样,
-		// 且输出文件也不为空,
+		// 如果当前日期和上一次日期一样
+		// 且输出文件也不为空
 		return w.outputFile, nil
 	}
 
