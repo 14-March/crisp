@@ -82,7 +82,7 @@ func websocketHandshake(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// 将指令上下文添加到分组,
-	// 当断开连接时移除指令上下文...
+	// 当断开连接时移除指令上下文
 	broadcaster.AddCmdCtx(sessionId, exampleCtx)
 	defer broadcaster.RemoveCmdCtxBySessionId(sessionId)
 
