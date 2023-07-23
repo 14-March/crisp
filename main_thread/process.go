@@ -15,8 +15,8 @@ var mainQ = make(chan func(), mainQSize)
 var started = false
 var startLocker = &sync.Mutex{}
 
-// Process 处理任务,
-// 只将任务添加到队列而不是马上执行...
+// Process 处理任务
+// 只将任务添加到队列而不是马上执行
 func Process(task func()) {
 	if nil == task {
 		return
